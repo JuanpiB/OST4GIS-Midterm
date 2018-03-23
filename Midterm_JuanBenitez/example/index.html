@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS Imports -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+      <!-- Load Leaflet -->
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+      <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!--Left Panel-->
+
+	    <div class="sidebar">
+      <h2>Santiago de Querétaro</h2>
+      <h3>Querétaro, Mexico</h3>
+      <!-- Buttons <button type="button">-->
+
+      <button id= "Previous">Previous</button>
+      <button id= "Next"> Next </button>
+	    <div id="Slide1" class="slide">
+        <p class= "main"> Queretaro is a city in central Mexico, located 3 hours north (~220 km) of the capital, Mexico City.
+It has a population of 800,000 and a land area of 176 square kilometers.
+Even though the city has a GDP per capita above (60 percent larger)  than the national one, the city still has 26 percent of its population living below poverty levels and approximately 3 percent of its population in extreme poverty.
+        <br>
+        </p>
+        <p class= "main">
+          <br>For my semester-long studio project, my team of 11 students is partnering with the Secretaria de Movilidad (SEMOV),
+Queretaro's transportation operations and planning office, to develop public realm interventions that will make vulnerable neighborhoods more walkable,
+connected and bike-friendly.
+</p>
+<h4>Defining Vulnerable Neighborhoods</h4>
+<p class= "main">A comprehensive definition of vulnerability takes into account physical risks,
+  socioeconomic challenges and deficiencies in infrastructure. In the process of selecting the neighborhoods we considered these three factors, gathered the respective data and overlaid them in a map.
+</p>
+<h4>Map</h4>
+<p class= "main">The map to the right depicts the centroids of the AGEBs (geographic units comparable to census tracts) located in the neighborhoods we defined as vulnerable.
+</p>
+
+
+</div>
+
+  <div id="Slide2" class="slide">
+     <h3>Methodology</h3>
+     <p class= "main">
+      A critical element in our risk assessment was our measure of social deprivation.
+      To unveil some the socioeconomic challenges in the neighborhood we relied in the indicators used from the “Indice de Rezago Social”. This index defines social deprivation by looking at multiple indicators such as:
+</p>
+<p class= "main">
+      Percentage of the population with basic education incomplete</p>
+      <p class= "main">Percentage of the population without access to health services  </p>
+    <p class= "main">  Percentage of the houses with dirt floor
+      </p>
+<p class= "main">
+Even though these indicators serve as proxys for poverty and deprivation, we considered it important to also include income values in our analysis.
+</p>
+<p class= "main">
+To address this challenge, we decided that the most comprehensive method would be one which used these same indicators from the Rezago Social, which are accepted measures to define vulnerability, as predictors of income.
+</p>
+<p class= "main">
+We built a linear regression using Intercensus data from 2015 at the individual level, and projected the obtained coefficients to Census 2010 data at the AGEB level. This process allowed us to predict an income measure for the neighborhoods and determine the ones among the lowest quantiles.
+</p>
+</div>
+  <div id="Slide3" class ="slide">
+    <h3>Linear Regression</h3>
+    <h4>Coefficients</h4>
+    <p class= "main">
+      Lack of Health Insurance= -0.35
+    </p>
+    <p class= "main">
+      Ages 6-14 that does not attend school= -0.30
+    </p>
+    <p class= "main">
+      Ages 15-24 that does not attend an academic institution= -0.24
+    </p>
+    <p class= "main">
+      >15 years with basic education incomplete=-0.22
+    </p>
+    <p class= "main">
+      House with no telephone= -0.15
+    </p>
+    <p class= "main">
+      House with dirt floor= -0.15
+    </p>
+    <p class= "main">
+      >15 and illiterate= -.14
+    </p>
+    <p class= "main">
+      No washing machine= -0.06
+    </p>
+      No Refrigerator= -0.05
+    <p class= "main">
+    </p>
+    <h4>Income Values</h4>
+    <p class= "main">
+      Click on the markers and a pop-up will show the income prediction for the AGEB.
+      Income values represent average monthly income for working age individuals.
+    </p>
+    <h4>Currency Exchange</h4>
+    <p class= "main">
+      1 dollar = 20 Pesos.
+      <br>
+      5,000 pesos a month is approximately US$250
+    </p>
+
+
+</div>
+  <div id="Slide4" class ="slide">
+    <h3>Santa Rosa Jáuregui</h3>
+  <p class= "main"> Santa Rosa Jáuregui is located north of the urban core along
+the highway, this neighborhood
+lacks transit access and quality road
+infrastructure. Although parts of the
+neighborhood have quality urban
+spaces, the Infonavit-built outskirts communities are in
+much poorer condition.
+</p>
+</div>
+<div id="Slide5"class="slide">
+  <h3>San Francisquito</h3>
+<p class= "main"> San Francisquito is an old neighborhood
+near Queretaro’s historic center with
+mostly 1-2 story buildings. Although
+the neighborhood has relatively good
+infrastructure and public spaces,
+criminal activity and safety concerns
+continue to be a problem
+  </p>
+  </div>
+      <div id="Slide6" class="slide">
+        <h3>El Salitre</h3>
+        <p class= "main"> El Salitre is well connected to
+Queretaro’s highways and has relatively
+good road infrastructure. While the
+neighborhood has sidewalks and a few
+parks, persistent poverty in the area and
+poor maintenance have degraded
+their use.
+        </p>
+  </div>
+</div>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Javascript Imports -->
+    <script src="js/leaflet.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/example.js"></script>
+    <script src="js/data.js"></script>
+  </body>
+</html>

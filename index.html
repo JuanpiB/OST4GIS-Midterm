@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div id="intro">
+        <h1>Social Deprivation in Queretaro, Mexico</h1>
+        <p class="main">The city of Queretaro</p>
+        <p>This AGEB has an income level of</p>
+      </div>
+      <div id="results" style="display: none;">
+        <h1 id="day1" class="income-level">Income Level</h1>
+        <p class="main">The income level is <span id= "day2" class="income-level">
+        income level</span>.</p>
+      </div>
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+    <!-- Legend -->
+    <div class="legend">
+      <div class='legend-title'>Legend</div>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:red;'></span>Monday</li>
+          <li><span style='background:green;'></span>Tuesday</li>
+          <li><span style='background:pink;'></span>Wednesday</li>
+          <li><span style='background:orange;'></span>Thursday</li>
+          <li><span style='background:black;'></span>Friday</li>
+        </ul>
+    </div>
+    <!-- Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
